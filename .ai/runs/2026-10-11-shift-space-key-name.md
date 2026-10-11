@@ -62,4 +62,4 @@ Input key parsing and the default (Light/CSI) renderer:
 
 ### Phase 3: Documentation
 
-- [ ] 3.1 Document `shift-space` in the man page
+- [x] 3.1 Document `shift-space` in the man page — a33d0592
