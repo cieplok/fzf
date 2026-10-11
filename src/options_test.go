@@ -168,9 +168,9 @@ func TestParseKeys(t *testing.T) {
 	checkEvent(tui.AltKey(' '), "alt-SPACE")
 
 	// Synonyms
-	pairs, _, _ = parseKeyChords("enter,Return,space,tab,btab,esc,up,down,left,right", "")
-	if len(pairs) != 9 {
-		t.Error(9)
+	pairs, _, _ = parseKeyChords("enter,Return,space,tab,btab,esc,up,down,left,right,shift-space", "")
+	if len(pairs) != 10 {
+		t.Error(10)
 	}
 	check(tui.Enter, "Return")
 	checkEvent(tui.Key(' '), "space")
@@ -181,6 +181,7 @@ func TestParseKeys(t *testing.T) {
 	check(tui.Down, "down")
 	check(tui.Left, "left")
 	check(tui.Right, "right")
+	check(tui.ShiftSpace, "shift-space")
 
 	pairs, _, _ = parseKeyChords("Tab,Ctrl-I,PgUp,page-up,pgdn,Page-Down,Home,End,Alt-BS,Alt-BSpace,shift-left,shift-right,btab,shift-tab,return,Enter,bspace", "")
 	if len(pairs) != 11 {
