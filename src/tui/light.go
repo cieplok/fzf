@@ -832,6 +832,12 @@ func (r *LightRenderer) parseEscSequence(sz *int) Event {
 						return Event{AltDelete, 0, nil}
 					}
 				}
+				// Kitty keyboard protocol: Shift+Space arrives as CSI 32;2u.
+				// fzf accepts only this one CSI-u key; the rest stay Invalid.
+				if len(r.buffer) > 6 && r.buffer[3] == '2' && r.buffer[4] == ';' && r.buffer[5] == '2' && r.buffer[6] == 'u' {
+					*sz = 7
+					return Event{ShiftSpace, 0, nil}
+				}
 				return Event{Invalid, 0, nil}
 			case '4':
 				if rxvtKeyEnd(r.buffer[3]) {

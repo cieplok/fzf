@@ -1043,6 +1043,8 @@ func parseKeyChords(str string, message string) (map[tui.Event]string, []tui.Eve
 			add(tui.Backspace)
 		case "ctrl-space":
 			add(tui.CtrlSpace)
+		case "shift-space":
+			add(tui.ShiftSpace)
 		case "ctrl-^", "ctrl-6":
 			add(tui.CtrlCaret)
 		case "ctrl-/", "ctrl-_":

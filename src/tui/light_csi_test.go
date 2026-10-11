@@ -107,6 +107,7 @@ func TestUnknownEscapeSequence(t *testing.T) {
 		{"\x1b[200~", BracketedPasteBegin, 6},
 		{"\x1b[Z", ShiftTab, 3},
 		{"\x1bOA", Up, 3},
+		{"\x1b[32;2u", ShiftSpace, 7}, // Kitty SHIFT-SPACE
 		{"\x1b[12;34R", Invalid, 8},
 		{"\x1b[?2004;2$y", Invalid, 11},
 	} {
