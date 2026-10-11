@@ -51,14 +51,14 @@ Input key parsing and the default (Light/CSI) renderer:
 
 ### Phase 1: Key name and event
 
-- [ ] 1.1 Add `ShiftSpace` event to the EventType enum
-- [ ] 1.2 Regenerate `eventtype_string.go` with stringer
-- [ ] 1.3 Add `shift-space` case to `parseKeyChords` + test
+- [x] 1.1 Add `ShiftSpace` event to the EventType enum — 850be339
+- [x] 1.2 Regenerate `eventtype_string.go` with stringer — 850be339
+- [x] 1.3 Add `shift-space` case to `parseKeyChords` + test — 850be339
 
 ### Phase 2: CSI-u parsing
 
-- [ ] 2.1 Accept `\e[32;2u` as `ShiftSpace` in the light parser
-- [ ] 2.2 Add light renderer unit tests
+- [x] 2.1 Accept `\e[32;2u` as `ShiftSpace` in the light parser — 2c49e879
+- [x] 2.2 Add light renderer unit tests — 2c49e879
 
 ### Phase 3: Documentation
 
