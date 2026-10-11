@@ -185,6 +185,7 @@ func TestLightRenderer(t *testing.T) {
 	assertEscSequence("\x1b[3;2~", "shift-delete")
 	assertEscSequence("\x1b[5;2~", "shift-page-up")
 	assertEscSequence("\x1b[6;2~", "shift-page-down")
+	assertEscSequence("\x1b[32;2u", "shift-space")
 
 	assertEscSequence("\x1b\x1b", "esc")
 	assertEscSequence("\x1b\x1b[A", "alt-up")
