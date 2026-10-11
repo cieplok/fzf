@@ -47,6 +47,8 @@ Input key parsing and the default (Light/CSI) renderer:
 
 ## Progress
 
+PR: #1 (link: https://github.com/cieplok/fzf/pull/1)
+
 > Convention: `- [ ]` pending, `- [x]` done. Append ` — <commit sha>` when a step lands. Do not rename step titles.
 
 ### Phase 1: Key name and event
